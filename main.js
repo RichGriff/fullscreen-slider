@@ -13,7 +13,7 @@ const RenderNotifications = async () => {
 
             var div = document.createElement("div")
             div.classList.add('slide');
-            div.style.background = `url('https://pobltvapi-test.azurewebsites.net${imageUrl}') no-repeat center center/cover`;
+            div.style.background = `url('https://pobl-tv-api.azurewebsites.net${imageUrl}') no-repeat center center/cover`;
             div.innerHTML = `<div class='content'><h1>${title}</h1><p>Testing</p></div>`;
 
             sliderContainer.appendChild(div);
@@ -91,7 +91,7 @@ RenderNotifications();
 
 // Fetch Notications from API
 async function GetNotifications() {
-    const response = await  fetch(`https://pobltvapi-test.azurewebsites.net/api/notifications?populate=image`)
+    const response = await  fetch(`https://pobl-tv-api.azurewebsites.net/api/notifications?populate=image`)
     const result = await response.json()
     return result.data;
 }
