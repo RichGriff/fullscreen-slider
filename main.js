@@ -10,11 +10,12 @@ const RenderNotifications = async () => {
         notifications.map(n => {
             let title = n.attributes.title;
             let imageUrl = n.attributes.image.data.attributes.url
+            let desc = n.attributes.description
 
             var div = document.createElement("div")
             div.classList.add('slide');
             div.style.background = `url('https://pobl-tv-api.azurewebsites.net${imageUrl}') no-repeat center center/cover`;
-            div.innerHTML = `<div class='content'><h1>${title}</h1><p>Testing</p></div>`;
+            div.innerHTML = `<div class='content'><h1>${title}</h1><p>${desc}</p></div>`;
 
             sliderContainer.appendChild(div);
         })
