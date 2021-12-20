@@ -8,7 +8,7 @@ const RenderNotifications = async () => {
     
     if(notifications.length > 0) {        
         notifications.map(n => {
-            let title = n.attributes.Title;
+            let title = n.attributes.title;
             let imageUrl = n.attributes.image.data.attributes.url
 
             var div = document.createElement("div")
